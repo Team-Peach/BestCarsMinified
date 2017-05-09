@@ -1,0 +1,44 @@
+{
+	"Ads": {
+		"title": "Audi A4 2,0TDI",
+		// "date": "date.now",
+		"description": "ABS, ESP, Airbag, Халогенни фарове, Аларма, Имобилайзер, Центр. заключване, Старт-Стоп система",
+		"contacts": {
+			"name": "Петър",
+			"city": "Пловдив",
+			"GMS": "0888 888 888"
+		},
+		"images": [
+			"url",
+			"url",
+			"url",
+			"url"
+		],
+		"vehicle": {
+						"manufacturer": "BMW",
+						"model": "528",
+						"yearOfManufacture": "1997",
+						"kilometersTraveled": "220 000",
+						"price": "14 000",
+						"fuel": "Бензин",
+						"transmission": "Автоматични",
+						"horsepower": 193,
+			// car
+			"type": "Комби",
+			"numberOfDoors": 5,
+			"numberOfSeats": 5,
+			"color": "Светло сив"
+			// truck
+			// motor
+			// camper
+		},
+		"comments": [
+			{
+				"title": "много яка",
+				"content": "Колата е страшна. Заслужава си",
+				"author": "Пешо разбирача",
+				"date": "04-04-2017"
+			}
+		]
+	}
+}

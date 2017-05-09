@@ -1,0 +1,10 @@
+<div>
+<h4>Comments</h4>
+{{#each comments}}
+<div>
+    <a class="redirect-user-profile" href="#/user/profile/?id={{_acl.creator}}"><strong>{{this._author}}</strong></a>
+    <p>{{this._content}}</p>
+    <p>Date: {{this._kmd.ect}}</p>
+</div>
+{{/each}}
+</div>

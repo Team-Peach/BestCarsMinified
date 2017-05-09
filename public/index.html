@@ -1,0 +1,150 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BestCars</title>
+    <link rel="shortcut icon" type="image/png" href="images/BestCarsFav.png" />
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/toastr/build/toastr.css">
+    <link rel="stylesheet" href="css/mine.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="css/logo-nav.css" rel="stylesheet">
+    <!-- Website Font style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Jquery-UI themes -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v2.9";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <header class="jumbotron hidden-xs hidden-sm">
+        <div class="container text-center">
+        </div>
+    </header>
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/">
+                    <img src="images/BestCarsLogo.png" alt="BestCars">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="btn-route hvr-underline-from-center"><a href="#/cars"><i class="fa fa-car" aria-hidden="true"></i> Cars</a></li>
+                    <li class="btn-route hvr-underline-from-center"><a href="#/motorcycles"><i class="fa fa-motorcycle" aria-hidden="true"></i> Motorcycles</a></li>
+                    <li class="btn-route hvr-underline-from-center"><a href="#/trucks"><i class="fa fa-truck" aria-hidden="true"></i> Trucks</a></li>
+                    <li class="btn-route hvr-underline-from-center"> <a href="#/campers"><i class="fa fa-bus" aria-hidden="true"></i> Campers</a></li>
+                    <li class="btn-route hvr-underline-from-center"><a href="#/about"><i class="fa fa-info-circle" aria-hidden="true"></i> About us</a></li>
+                    <li class="btn-route hvr-underline-from-center"><a href="#/contacts"><i class="fa fa-globe" aria-hidden="true"></i> Contacts</a></li>
+
+                </ul>
+
+                <form id="search-form" class="nav navbar-form navbar-right" role="search">
+                    <div class="form-group input-group">
+                        <input type="text" id="search" class="form-control" placeholder="Search by manifacturor or model">
+                        <span class="input-group-btn">
+                        <button id="search-button" class="btn btn-default" type="submit">
+                        <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="buttonLogin" class="btn-route hidden"><a href="#/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                    <li id="buttonRegister" class="btn-route hidden"><a href="#/register"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></li>
+                    <li id="buttonUserProfile" class="btn-route hidden"><a href="#/profile"><i class="fa fa-user" aria-hidden="true"></i> My profile</a></li>
+                    <li id="buttonCreateNewAd" class="btn-route hidden"><a href="#/createAd"><i class="fa fa-plus-circle" aria-hidden="true"></i> New ad</a></li>
+                    <li id="buttonLogout" class="btn-route hidden"><a href="#/home"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <section class="container text-center" id="viewSearch">
+
+        <button type="button" class="btn btn-default hvr-icon-up" id="sortByDate-New">
+            New
+        </button>
+
+        <button type="button" class="btn btn-default hvr-icon-down" id="sortByDate-Old">
+            Old
+        </button>
+
+        <button type="button" class="btn btn-default hvr-icon-up" id="sortByPrice-High">
+            Price
+        </button>
+
+        <button type="button" class="btn btn-default hvr-icon-down" id="sortByPrice-Low">
+            Price
+        </button>
+
+        <button type="button" class="btn btn-default hvr-icon-up" id="sortByYear-High">
+            Year
+        </button>
+        <button type="button" class="btn btn-default hvr-icon-down" id="sortByYear-Low">
+            Year
+        </button>
+    </section>
+
+
+    <main id="app-container" class="container">
+        <div class="loader"></div>
+    </main>
+    
+<!--text-center-->
+    <footer class="footer container-fluid "> 
+        <div class="col-sm-12">  
+            <div class="col-sm-8">
+                <a class="" href="#/">
+                    <img src="images/BestCarsLogo.png" alt="BestCars">
+                </a>
+                <p class="copyright-footer">Copyright &copy; BestCars 2017</p>
+            </div>
+            <div class="col-sm-4">
+                <div id="fb-page" class="fb-page" data-href="https://www.facebook.com/BestCarsBG" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                <blockquote cite="https://www.facebook.com/BestCarsBG" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/BestCarsBG">Bestcarsforyou</a></blockquote>
+                </div>
+            </div>
+         </div>
+    </footer>
+
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/systemjs/dist/system.js"></script>
+    <script src="js/system-config.js"></script>
+    <script src="libs/sammy/lib/sammy.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="libs/handlebars/dist/handlebars.min.js"></script>
+    <script src="libs/toastr/build/toastr.min.js"></script>
+    <script src="libs/fuse.js/dist/fuse.min.js"></script>
+    <!-- Jquery-UI scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="libs/moment/moment.js"></script>
+</body>
+
+</html>
